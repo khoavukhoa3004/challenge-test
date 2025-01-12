@@ -1,0 +1,20 @@
+version: '3.8'
+services: 
+  postgres:
+    image: postgres:15
+    container_name: postgres-15
+    ports: 
+      - '5432:5432'
+    networks:
+      - postgres-15-network
+    environment:
+      # - TZ=Asia/Ho_Chi_Minh
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=tech_test
+    volumes:
+      - db:/var/lib/postgresql/data
+    command: ["postgres", "-c", "log_min_messages=log", "-c", "log_statement=all"]
+    restart: unless-stopped 
+volumes:
+  db: 

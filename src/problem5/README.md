@@ -11,6 +11,8 @@
 This will create postgreSQL database container with the setup information in docker-compose.yml
 
 #### Backend
+Go to the folder /be
+
 In development mode, we can run by follow this instruction bellow:
 1. install yarn from npm: [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
 2. Run command:
@@ -28,6 +30,8 @@ This will generate configuration of the db schema in /prisma
     yarn prisma push
 ```
 This will push the db configuration schema to postgreSQL db (the database structures)
+For example, the db structures look like this:
+![Diagram](./results/db_result.png)
 5. Run command
 ```
     yarn dev
@@ -40,7 +44,9 @@ In production mode, we can use docker to run container (the docker setup has bee
 ```
 sh deploy-dev.sh
 ```
-This will create be container. We can test with the postman collection in folder /postman
+This will create be container. 
+![BE Result](./results/be_deploy_success.png)
+We can test with the postman collection in folder /postman
 
 
 ### Points to improve:

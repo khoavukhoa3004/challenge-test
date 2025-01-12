@@ -51,6 +51,32 @@ We can see both db container and be container in docker desktop:
 
 We can test with the postman collection in folder /postman
 
+### Backend Structrures
+I structure the backend by following feature - based structures (similar to the Domain-Driven Design)
+```
+/prisma
+/scripts -> for common script command, sql scripts, etc...
+/src
+    /config
+        default.ts
+    /middlewares
+        ...
+    /modules
+        /books
+            /controllers
+            /services
+            /routers
+            /dto
+            ...
+        /categories
+        ...
+    /services -> the common services
+    /utils
+    app.ts
+    package.json
+    tsconfig.json
+    yarn.lock
+```
 
 ### Points to improve:
 - Implement middlewares for validate request Query/Body.

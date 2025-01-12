@@ -46,6 +46,9 @@ sh deploy-dev.sh
 ```
 This will create be container. 
 ![BE Result](./results/be_deploy_success.png)
+We can see both db container and be container in docker desktop:
+![Docker Desktop Result](./results/container_result.png)
+
 We can test with the postman collection in folder /postman
 
 
